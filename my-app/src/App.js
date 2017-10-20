@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import data from './data.json';
 //class Item extends React.Component{
 //    render(){
 //        function MyName(props){
@@ -9,14 +9,14 @@ import './App.css';
 //        };
 //    }
 //}
-
+var mydata = data;
+console.log(mydata);
 class Welcome extends Component{
     render(){
         return(
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1>Hello, {this.props.name}</h1>
                 </header>
             </div>
 
@@ -26,13 +26,10 @@ class Welcome extends Component{
 
 }
 class Another extends Component{
+
     render(){
         return(
-            <div>
-                <Welcome name="Krushan" />
-                <h1>I love react</h1>
-
-            </div>
+            <div><Welcome></Welcome></div>
 
         );
     }
